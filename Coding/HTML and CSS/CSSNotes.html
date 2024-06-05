@@ -1,0 +1,167 @@
+<!-- 
+CSS INTRO
+CSS always needs 3 inputs: selectors, property and value.
+Selectors are the thing that we want to modify.
+Properties are the characteristics of the thing that we want to change.
+Values to what amount or type we want to change that property.
+
+For example:
+p {
+  color: red;
+  text-align: center;
+}
+* p is a selector in CSS (it points to the HTML element you want to style: <p>).
+* color is a property, and red is the property value. 
+* text-align is a property, and center is the property value. 
+
+HOW TO ADD CSS
+*Internal: we add CSS using <style></style> sandwich inside the HTML file.
+*External: we can add CSS by referencing an external CSS file. <link rel="stylesheet" href="mystyle.css">
+*Inline: we can add CSS to an specific HTML element. <p style="color:red;">This is a paragraph.</p>
+MAIN SANWICHES
+*html:It contains all the code in the webpage.
+*style:It contains exclusively all the CSS code.
+*body:It contains the content of the webpage.
+*head:It contains the ID info of the webpage.
+
+CSS SELECTORS
+Id: (#) are like giving a first name to an HTML element.
+Class: (.) are like giving a last mane to various HTML elements.
+Element: () are selecting a type of HTML element.
+
+
+
+The total width of an element should be calculated like this:
+
+Total element width = width + left padding + right padding + left border + right border
+
+The total height of an element should be calculated like this:
+
+Total element height = height + topp padding + bottom padding + top border + bottom border
+
+
+Note: The margin property also effects the total space that the box will take up on the page,
+but the margin is not included in  the actual size of the box. The box's total width and height stops 
+at the border.
+-----------------------------------------------------------------
+
+The text-align-last Property
+
+Text-align-last:right:
+only modifies the last line of the
+paragraph.
+
+Text-align-last: center:
+modifies the last line to be smaller than the top but 
+centered.
+
+text-align-last: justify:
+modifies the last line to have seperated words.
+-----------------------------------------------------------------
+The vertical-align: baseline (default):
+keeps the image and text at a leveled base.
+
+Vertical-align: text-top:
+Makes the image and text move to the top of the base
+
+Vertical-align:text-bottom:
+makes the image or text lower from the base a little.
+
+Vertical-align:sub:
+Makes the image of text go lower than than
+ the text-bottom base
+
+ Vertical-align:sup:
+ makes the image or text move to the highest 
+ point of the paragraph
+--------------------------------------------------------------------
+
+ The text-decoration property
+overline: draws a line over the text.
+
+ Line-through: draws a line through the text.
+
+ Underline:  draws a line inder teh paragraph.
+
+ Overline and underline text decoration:
+Combines the three options.
+
+You can also modify its thickness, color, and style. 
+
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-image: url(images/img_tree.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: scroll;
+      } 
+      h1{
+        background-color: rgb(21, 184, 199);
+      }
+      p{
+        background-color: rgb(2, 213, 255);
+        margin-right: 100px;
+        margin-left: 100px;
+      }
+      div{
+        background-color: rgb(0, 242, 255);
+        opacity: 50%;
+      }
+      p.dotted {border-style: dotted; outline-style: dotted; outline-width: thick; outline-color:rgb(246, 255, 0)}
+      p.dashed {border-style: dashed;border-width: 20px;}
+      p.solid {border-style: solid; border-color:#ff0000;}
+      p.double {border-bottom-style: double;}
+      p.groove {border-style: groove;border-radius: 10px;}
+      p.ridge {border-style: ridge;}
+      p.inset {border-style: inset;}
+      p.outset {border-style: outset;}
+      p.none {border-style: none;}
+      p.hidden {border-style: hidden;}
+      p.mix {border-style: dotted dashed solid double;}
+
+      p.mirror {
+        direction: rtl;
+        unicode-bidi: bidi-override;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <h1>
+      CSS Notes
+    </h1>
+    <p>
+      This are my CSS notes.
+    </p>
+    <div>
+      <h2>
+        This is a div
+      </h2>
+      <p>
+        This is the text of the div
+      </p>
+    </div>
+    <p class="dotted">A dotted border.</p>
+    <p class="dashed">A dashed border.</p>
+    <p class="solid">A solid border.</p>
+    <p class="double">A double border.</p>
+    <p class="groove">A groove border.</p>
+    <p class="ridge">A ridge border.</p>
+    <p class="inset">An inset border.</p>
+    <p class="outset">An outset border.</p>
+    <p class="none">No border.</p>
+    <p class="hidden">A hidden border.</p>
+    <p class="mix">A mixed border.</p>
+    <p class="mirror">This paragraph's
+       text has been mirrored.</p>
+  </body>
+</html>
