@@ -95,7 +95,13 @@
             color:black;
             font-weight: bold;
         }
+        label{
+            color:#ccc
+        }
         
+        .Greetings{
+            text-align: center;
+        }
     </style> 
     </head>
     
@@ -124,6 +130,13 @@
             <source src="audio/y2mate.com - Modern Warfare Season 6  7 Lobby Music Warzone  Multiplayer Menu Theme  FULL VERSION.mp3" type="audio/mpeg">
             <source src="audio/y2mate.com - Modern Warfare Season 6  7 Lobby Music Warzone  Multiplayer Menu Theme  FULL VERSION.mp3" type="audio/ogg">
         </audio></center>
+        <div class="Greetings">
+            <label for="nameInput">Enter your name: </label>
+            <input type="text" id="nameInput">
+            <button id="greetButton">Greet Me!</button>
+            <p id="greetingMessage"></p>
+        </div>
+        
         <div class="Matthew">
             <div class="icon-container">
                 <span class="material-icons" style="font-size: 60px;" >person</span>
