@@ -20,12 +20,17 @@
     <script>
         // Definimos un objeto simple llamado 'persona'
         var persona = {
-            
+            nombre: "Pedro",
+            edad: 50,
+            ocupacion: "Arquitecto"
+    
         };
 
         // Función para mostrar la información de la persona
         function mostrarPersona() {
-            
+        	document.getElementById("infoPersona").innerText = "Su nombre es " + persona.nombre
+            + ", tiene " + persona.edad + " años y es un " + persona.ocupacion + "." ;
+             
         }
 
         // Función para cambiar el nombre de la persona
