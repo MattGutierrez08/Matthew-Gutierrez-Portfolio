@@ -15,19 +15,22 @@
     <!-- Cambiar el nombre del objeto -->
     <input type="text" id="nuevoNombre" placeholder="Nuevo nombre">
     <button onclick="cambiarNombre()">Cambiar Nombre</button>
-    <p id="resultadoCambioNombre"></p>
     <br>
     
     <!-- Cambiar la edad del objeto -->
     <input type="number" id="nuevaEdad" placeholder="Nueva edad">
     <button onclick="cambiarEdad()">Cambiar Edad</button>
-    <p id="resultadoCambioEdad"></p>
     <br>
     
     <!-- Cambiar la ocupación del objeto -->
     <input type="text" id="nuevaOcupacion" placeholder="Nueva ocupación">
     <button onclick="cambiarOcupacion()">Cambiar Ocupación</button>
-    <p id="resultadoCambioOcupacion"></p>
+    <br>
+
+    <!-- Cambiar el origen del objeto -->
+    <input type="text" id="nuevoOrigen" placeholder="Nuevo origen">
+    <button onclick="cambiarOrigen()">Cambiar Origen</button>
+    <p id="resultadoCambioOrigen"></p>
 
     <script>
         // Definimos un objeto simple llamado 'persona'
@@ -35,8 +38,9 @@
             nombre: "Juan",
             edad: 30,
             ocupacion: "Ingeniero",
+            origen: "Colombia",
             mostrarInfo: function() {
-                return `Nombre: ${this.nombre}, Edad: ${this.edad}, Ocupación: ${this.ocupacion}`;
+                return `Nombre: ${this.nombre}, Edad: ${this.edad}, Ocupación: ${this.ocupacion}, Origen: ${this.origen}`;
             },
             cambiarNombre: function(nuevoNombre) {
                 this.nombre = nuevoNombre;
@@ -46,6 +50,9 @@
             },
             cambiarOcupacion: function(nuevaOcupacion) {
                 this.ocupacion = nuevaOcupacion;
+            },
+            cambiarOrigen: function(nuevoOrigen) {
+                this.origen = nuevoOrigen;
             }
         };
 
@@ -72,6 +79,13 @@
         function cambiarOcupacion() {
             var nuevaOcupacion = document.getElementById("nuevaOcupacion").value;
             persona.cambiarOcupacion(nuevaOcupacion);
+            mostrarPersona(); // Actualiza la información mostrada
+        }
+
+        // Función para cambiar el origen de la persona
+        function cambiarOrigen() {
+            var nuevoOrigen = document.getElementById("nuevoOrigen").value;
+            persona.cambiarOrigen(nuevoOrigen);
             mostrarPersona(); // Actualiza la información mostrada
         }
     </script>
