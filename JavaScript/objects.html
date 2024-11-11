@@ -15,11 +15,19 @@
     <!-- Cambiar el nombre del objeto -->
     <input type="text" id="nuevoNombre" placeholder="Nuevo nombre">
     <button onclick="cambiarNombre()">Cambiar Nombre</button>
+    <p id="resultadoCambioNombre"></p>
     <br>
     
+    <!-- Cambiar la edad del objeto -->
     <input type="number" id="nuevaEdad" placeholder="Nueva edad">
     <button onclick="cambiarEdad()">Cambiar Edad</button>
-
+    <p id="resultadoCambioEdad"></p>
+    <br>
+    
+    <!-- Cambiar la ocupación del objeto -->
+    <input type="text" id="nuevaOcupacion" placeholder="Nueva ocupación">
+    <button onclick="cambiarOcupacion()">Cambiar Ocupación</button>
+    <p id="resultadoCambioOcupacion"></p>
 
     <script>
         // Definimos un objeto simple llamado 'persona'
@@ -33,25 +41,38 @@
             cambiarNombre: function(nuevoNombre) {
                 this.nombre = nuevoNombre;
             },
-            cambiarEdad: function (nuevaEdad) {
-            	this.edad = nuevaEdad;
-            }            
+            cambiarEdad: function(nuevaEdad) {
+                this.edad = nuevaEdad;
+            },
+            cambiarOcupacion: function(nuevaOcupacion) {
+                this.ocupacion = nuevaOcupacion;
+            }
         };
 
         // Función para mostrar la información de la persona
         function mostrarPersona() {
             document.getElementById("infoPersona").innerText = persona.mostrarInfo();
-        };
+        }
 
         // Función para cambiar el nombre de la persona
         function cambiarNombre() {
             var nuevoNombre = document.getElementById("nuevoNombre").value;
             persona.cambiarNombre(nuevoNombre);
             mostrarPersona(); // Actualiza la información mostrada
-        };
-        
+        }
+
+        // Función para cambiar la edad de la persona
         function cambiarEdad() {
-           
+            var nuevaEdad = parseInt(document.getElementById("nuevaEdad").value);
+            persona.cambiarEdad(nuevaEdad);
+            mostrarPersona(); // Actualiza la información mostrada
+        }
+
+        // Función para cambiar la ocupación de la persona
+        function cambiarOcupacion() {
+            var nuevaOcupacion = document.getElementById("nuevaOcupacion").value;
+            persona.cambiarOcupacion(nuevaOcupacion);
+            mostrarPersona(); // Actualiza la información mostrada
         }
     </script>
 </body>
