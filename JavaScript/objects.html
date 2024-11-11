@@ -15,43 +15,40 @@
     <!-- Cambiar el nombre del objeto -->
     <input type="text" id="nuevoNombre" placeholder="Nuevo nombre">
     <button onclick="cambiarNombre()">Cambiar Nombre</button>
-    
+    <p id="resultadoCambioNombre"></p>
     <br>
     
     <input type="number" id="nuevaEdad" placeholder="Nueva edad">
     <button onclick="cambiarEdad()">Cambiar Edad</button>
 
+
     <script>
         // Definimos un objeto simple llamado 'persona'
         var persona = {
-            nombre: "Pedro",
-            edad: 50,
-            ocupacion: "Arquitecto",
-            cambiarNombre: function (nuevoNombre) {
-             	this.nombre = nuevoNombre;
-            }
+            nombre: "Juan",
+            edad: 30,
+            ocupacion: "Ingeniero",
+            mostrarInfo: function() {
+                return `Nombre: ${this.nombre}, Edad: ${this.edad}, Ocupación: ${this.ocupacion}`;
+            },
+            cambiarNombre: function(nuevoNombre) {
+                this.nombre = nuevoNombre;
+            },
             cambiarEdad: function (nuevaEdad) {
             	this.edad = nuevaEdad;
-            }
-    
+            }            
         };
 
         // Función para mostrar la información de la persona
         function mostrarPersona() {
-        	document.getElementById("infoPersona").innerText = "Su nombre es " + persona.nombre
-            + ", tiene " + persona.edad + " años y es un " + persona.ocupacion + "." ;
-             
+            document.getElementById("infoPersona").innerText = persona.mostrarInfo();
         }
 
         // Función para cambiar el nombre de la persona
         function cambiarNombre() {
-             var nuevoNombre = document.getElementById("nuevoNombre").value;
-             persona.cambiarNombre(nuevoNombre);
-             mostrarPersona();
-        }
-        
-        function cambiarEdad() {
-        	
+            var nuevoNombre = document.getElementById("nuevoNombre").value;
+            persona.cambiarNombre(nuevoNombre);
+            mostrarPersona(); // Actualiza la información mostrada
         }
     </script>
 </body>
