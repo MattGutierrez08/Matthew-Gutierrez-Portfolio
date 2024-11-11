@@ -15,7 +15,6 @@
     <!-- Cambiar el nombre del objeto -->
     <input type="text" id="nuevoNombre" placeholder="Nuevo nombre">
     <button onclick="cambiarNombre()">Cambiar Nombre</button>
-    <p id="resultadoCambioNombre"></p>
     <br>
     
     <input type="number" id="nuevaEdad" placeholder="Nueva edad">
@@ -42,13 +41,17 @@
         // Función para mostrar la información de la persona
         function mostrarPersona() {
             document.getElementById("infoPersona").innerText = persona.mostrarInfo();
-        }
+        };
 
         // Función para cambiar el nombre de la persona
         function cambiarNombre() {
             var nuevoNombre = document.getElementById("nuevoNombre").value;
             persona.cambiarNombre(nuevoNombre);
             mostrarPersona(); // Actualiza la información mostrada
+        };
+        
+        function cambiarEdad() {
+           
         }
     </script>
 </body>
