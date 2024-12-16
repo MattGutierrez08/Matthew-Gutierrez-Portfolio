@@ -8,7 +8,7 @@ document.getElementById('greetButton').addEventListener('click', function() {
     }
 });
 
-// PARTIAL IMPLEMENTATION OF SCROLL TO TOP BUTTON
+// PARTIAL IMPLEMENTATION OF SCROLL TO TOP BUTTON 
 
 // Step 1: Select the button element from the DOM (use `document.getElementById`)
 // Hint: The button's ID is 'scrollToTopBtn'
@@ -33,7 +33,7 @@ document.getElementById('greetButton').addEventListener('click', function() {
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
 window.addEventListener('scroll', function() {
-    // Your code here to show or hide the button
+   document.getElemntById('scrollToTopBtn') // Your code here to show or hide the button
 });
 
 scrollToTopBtn.addEventListener('click', function() {
